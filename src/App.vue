@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-02-01 11:05:31
- * @LastEditTime: 2021-02-02 18:09:19
+ * @LastEditTime: 2021-02-03 10:31:12
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue3-api\src\App.vue
@@ -24,7 +24,7 @@
 </template>
 
 <script>
-import { reactive, ref } from 'vue'
+import { onBeforeUpdate, reactive, ref } from 'vue'
 import Setup1 from './components/setup1'
 import Setup2 from './components/setup2'
 import Setup3 from './components/setup3'
@@ -54,6 +54,7 @@ export default {
   // 根据 attrs 或 slots 更改应用副作用, 需要在onUpdated中进行
   // emits: ['plus'],
   setup (props, context) {
+
     const dataCount = ref(0)
     const countNew = ref(1)
     

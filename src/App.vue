@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-02-01 11:05:31
- * @LastEditTime: 2021-02-03 15:45:40
+ * @LastEditTime: 2021-02-03 15:59:50
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue3-api\src\App.vue
@@ -21,7 +21,8 @@
     <!-- <readonly/> -->
     <!-- <watch-effect/> -->
     <!-- <watch/> -->
-    <reactive-1/>
+    <!-- <reactive-1/> -->
+    <raw/>
   </div>
 </template>
 
@@ -39,6 +40,7 @@ import readonly from './components/readonly'
 import watchEffect from './components/watchEffect'
 import watch from './components/watch'
 import reactive1 from './components/reactive'
+import raw from './components/raw'
 
 export default {
   name: 'App',
@@ -55,6 +57,7 @@ export default {
     watchEffect,
     watch,
     reactive1,
+    raw
   },
   // props 不可以进行解构， context可以进行解构
   // 根据 attrs 或 slots 更改应用副作用, 需要在onUpdated中进行

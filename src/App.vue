@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-02-01 11:05:31
- * @LastEditTime: 2021-02-02 18:09:19
+ * @LastEditTime: 2021-02-03 18:28:42
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue3-api\src\App.vue
@@ -19,12 +19,16 @@
     <!-- <ref-3/> -->
     <!-- <computed/> -->
     <!-- <readonly/> -->
-    <watch-effect/>
+    <!-- <watch-effect/> -->
+    <!-- <watch/> -->
+    <!-- <reactive-1/> -->
+    <lifecycle/>
+    <raw/>
   </div>
 </template>
 
 <script>
-import { reactive, ref } from 'vue'
+import { onBeforeUpdate, reactive, ref } from 'vue'
 import Setup1 from './components/setup1'
 import Setup2 from './components/setup2'
 import Setup3 from './components/setup3'
@@ -35,6 +39,10 @@ import Ref3 from './components/ref3'
 import computed from './components/computed'
 import readonly from './components/readonly'
 import watchEffect from './components/watchEffect'
+import watch from './components/watch'
+import reactive1 from './components/reactive'
+import raw from './components/raw'
+import lifecycle from './components/lifecycle'
 
 export default {
   name: 'App',
@@ -48,12 +56,17 @@ export default {
     Ref3,
     computed,
     readonly,
-    watchEffect
+    watchEffect,
+    watch,
+    reactive1,
+    raw,
+    lifecycle
   },
   // props 不可以进行解构， context可以进行解构
   // 根据 attrs 或 slots 更改应用副作用, 需要在onUpdated中进行
   // emits: ['plus'],
   setup (props, context) {
+
     const dataCount = ref(0)
     const countNew = ref(1)
     
